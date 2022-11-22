@@ -32,7 +32,11 @@ const questionObjects = {
     },
 };
 
+<<<<<<< HEAD
 console.log(`===> ${questionObjects[randomNumber].question}`);
+=======
+console.log(questionObjects[randomNumber].question)
+>>>>>>> 6933dfb3acf8b25cf6813f53163f736d78acd7f1
 
 if (randomNumber === 0) {
     let counter = 0;
@@ -43,6 +47,7 @@ if (randomNumber === 0) {
         if (input === 'ANSWER') {
             console.log('You got it!!')
             counter = 0;
+<<<<<<< HEAD
             console.log(`===> ${questionObjects[randomNumber].question}`)
 
         } else if (counter >= 4) {
@@ -54,6 +59,24 @@ if (randomNumber === 0) {
             console.log(questionObjects[0].arrayTips0[counter])
         }
 
+=======
+            console.log(questionObjects[randomNumber].question)
+       
+        } else if (counter >= 4) {
+            console.log('Ops! No more chances')
+            return userInput === 'ANSWER'
+       
+        } else {
+            const randomArray = Math.floor(Math.random() * 5);
+            let compare = []
+            compare.push(randomArray)
+
+            
+            console.log('Oh, no... Maybe this one could help:')
+            console.log(questionObjects[0].arrayTips0[randomArray])
+        }
+        
+>>>>>>> 6933dfb3acf8b25cf6813f53163f736d78acd7f1
         counter++;
         console.log(`${counter} of 5 chances`)
     }
